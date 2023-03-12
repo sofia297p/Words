@@ -11,12 +11,13 @@ namespace words.Models
         public Guid Id { get; set; }
         public string Title { get; set; }
         public List<Word> Words { get; set; }
-
-        public Language(Guid id, string title, List<Word> words)
+        public String Description { get; set; }
+        public Language(Guid id, string title, List<Word> words, string description)
         {
             Id = id;
             Title = title;
             Words = words;
+            Description = description;
         }
 
         public double getAverageLevel()
